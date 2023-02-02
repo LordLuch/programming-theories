@@ -22,11 +22,11 @@ possível para que, a mudança não seja perceptível ao olho humano;
 Ocorre quando se utiliza de forma ineficiente uma 
 representação para os valores de pixel.
 Ex.: Usar 8 bits para representar cada pixel em uma
-imagem contendo apenas 16 tons, nesse caso bastariam 4 pixeis. 
+imagem contendo apenas 16 tons, nesse caso bastariam 4 pixels. 
 
 ### **Interpixel**
 
-Valores de pixeis vizinhos tendem a ser bastante similares.
+Valores de pixels vizinhos tendem a ser bastante similares.
 
 ### **Psico-visual**
 
@@ -71,7 +71,7 @@ representar uma imagem em termos das diferenças entre os valores de pixels vizi
 
 ### **Run Length Encoding (RLE)**
 
-Representa um grupo de pixeis adjacentes(em uma mesma linha) que 
+Representa um grupo de pixels adjacentes(em uma mesma linha) que 
 tenham valores similares, e então são substituídos por um tuple (n, i), n é o número consecutivo de pixels e i é a intensidade;
 Ex: A sequência { 32, 32, 32, 32, 32 } é representada como 5, 32.
 
@@ -147,15 +147,15 @@ Define 3 tipos de codificação de sistemas:
 
 
 - Ele força a ocorrência de redundâncias, e então as elimina. 
-- Quebra a imagem original em pequenas imagens de pixeis 8x8
+- Quebra a imagem original em pequenas imagens de pixels 8x8
 e opera sobre elas para manter os efeitos dessas perdas localmente.
 
 #### **Para imagens monocromáticas 8x8:**
 
 ```
 {
-  Subdivida a imagem em blocos de pixeis 8x8*;
-  para cada um dos blocos de pixeis faça:
+  Subdivida a imagem em blocos de pixels 8x8*;
+  para cada um dos blocos de pixels faça:
     subtraia 128 do valor de cada pixel;
     calcular o DCT para o bloco;
     quantize os coeficientes DCT;
@@ -193,7 +193,7 @@ Em 4:s1:s2, s1 e s2 são os números de amostras de croma por bloco de amostras 
 ### **Quantização de Coeficientes DCT**
 
 - O DCT produz coeficientes reais;
-  - Deixar dessa forma Consumiria mais espaço do que guardar os valores originais dos pixeis.
+  - Deixar dessa forma Consumiria mais espaço do que guardar os valores originais dos pixels.
 - Os coeficientes são quantizados como:
 
 <img src="https://raw.githubusercontent.com/LordLuch/images/main/ImageCompression/JPEG/DCT%20Coefficient%20Quantization.png" alt="DCT Coefficient Quantization" />  
